@@ -18,9 +18,9 @@ class RedisClient {
     return new Promise(( resolve) => {
       this.client.ping((err, reply) => {
          if (err) {
-           resolve(false);
+           console.error(false);
     } else {
-    resolve(reply === 'PONG');
+    console.log(true);
   }
 });
 });
@@ -61,7 +61,9 @@ class RedisClient {
     });
   });
 }
+}
+
 
 const redisClient = new RedisClient();
 
-module.export = redisClient;
+module.exports=  redisClient;
