@@ -5,7 +5,7 @@ class RedisClient {
   constructor(host, port) {
     this.client = redis.createClient ({
       host: host || 'localhost',
-    port: port || 6379,
+      port: port || 6379,
     });
 
   this.client.on('error', (err) => {
