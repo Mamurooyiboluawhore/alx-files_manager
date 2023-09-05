@@ -14,7 +14,7 @@ class RedisClient {
   
 }
 
-  async isAlive() {
+  isAlive() {
     return new Promise(( resolve) => {
       this.client.ping((err, reply) => {
          if (err) {

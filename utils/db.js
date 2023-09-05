@@ -10,7 +10,7 @@ class DBClient {
     this.db = null;
   }
 
-  async isAlive() {
+    isAlive() {
     try {
       await this.client.connect();
       await this.client.db(DB_DATABASE).command({ ping: 1 });
