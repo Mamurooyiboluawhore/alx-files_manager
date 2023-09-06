@@ -1,6 +1,5 @@
 import { MongoClient } from 'mongodb';
-import Collection from 'mongodb/lib/collection';
-
+// import Collection from 'mongodb/lib/collection';
 
 class DBClient {
   /*
@@ -27,7 +26,7 @@ class DBClient {
   async nbFiles() {
     return this.client.db().collection('files').countDocuments();
   }
-  
+
   async usersCollection() {
     return this.client.db().collection('users');
   }
