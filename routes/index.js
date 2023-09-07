@@ -1,6 +1,10 @@
-import AppController from ('../controllers/AppController');
-import app from ('../server');
+import AppController from '../controllers/AppController';
+import app from '../server';
 
-app.get('/status', await AppController.getStatus);
-app.get('/stats', await AppController.getStats);
+ app.get('/status', (req, res) => {
+    AppController.getStatus(req, res);
+  });
 
+  app.getStats('/stats', (req, res) => {
+    AppController.getStats(req, res);
+  });
